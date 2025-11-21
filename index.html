@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/base.css">
+  <title>Momentum</title>
+</head>
+<body>
+  <header class="app-header">
+      
+      <div class="header-center">
+        <button class="week-nav-btn" data-direction="prev">‹</button>
+        <div class="week-strip">calender</div>
+        <button class="week-nav-btn" data-direction="next">›</button>
+      </div>
+      
+      <div class="header-right">
+        <button id="today-btn">Today</button>
+        <button id="theme-toggle">☾</button>
+      </div>
+  </header>
+    
+  <aside class="app-sidebar">
+      <h1 class="app-title">Momentum</h1>
+      <ul class="nav">
+        
+        <li>
+          <button class="nav-btn" data-target="dashboard">
+            <i data-lucide="layout-dashboard"></i>
+            <span>Dashboard</span>
+          </button>
+        </li>
+        
+        <li>
+          <button class="nav-btn" data-target="productivity">
+            <i data-lucide="check-square"></i>
+            <span>Productivity</span>
+          </button>
+        </li>
+        
+        <li>
+          <button class="nav-btn" data-target="health">
+            <i data-lucide="heart-pulse"></i>
+            <span>Health</span>
+          </button>
+        </li>
+        
+        <li>
+          <button class="nav-btn" data-target="mindset">
+            <i data-lucide="brain"></i>
+            <span>Mindset</span>
+          </button>
+        </li>
+        
+        <li>
+          <button class="nav-btn" data-target="finance">
+            <i data-lucide="wallet"></i>
+            <span>Finance</span>
+          </button>
+        </li>
+        
+        <li>
+          <button class="nav-btn" data-target="education">
+            <i data-lucide="book-open"></i>
+            <span>Education</span>
+          </button>
+        </li>
+        
+      </ul>
+  </aside>
+
+  <div class="app-content">
+
+    <!-- =============== DASHBOARD TAB ================= -->
+    <section id="dashboard" class="tab-panel">
+      <header class="page-header">
+        <h2>Dashboard</h2>
+        <p class="page-subtext">Your daily overview</p>
+      </header>
+
+      <div class="tab-content">
+
+        <!-- Daily Focus -->
+        <section class="section">
+          <h3 class="section-title">Daily Focus</h3>
+          <div class="card daily-focus-card">
+            <h4 class="daily-focus-title">Your top priority today</h4>
+            <button id="edit-focus-btn">Edit</button>
+          </div>
+        </section>
+
+        <!-- Quick Stats -->
+        <section class="section">
+          <h3 class="section-title">Quick Stats</h3>
+          <div class="card-grid quick-stats-row">
+            <div class="card stat-card">Tasks Today</div>
+            <div class="card stat-card">Health Ring</div>
+            <div class="card stat-card">Mood Check-in</div>
+            <div class="card stat-card">Today's Spending</div>
+          </div>
+        </section>
+
+        <!-- Weekly Overview -->
+        <section class="section">
+          <h3 class="section-title">Weekly Overview</h3>
+          <div class="card graph-card">Graph Placeholder</div>
+        </section>
+
+      </div>
+    </section>
+
+
+    <!-- =============== PRODUCTIVITY TAB ================= -->
+    <section id="productivity" class="tab-panel" hidden>
+      <header class="page-header">
+        <h2>Productivity</h2>
+        <p class="page-subtext">Tasks, projects, and planning</p>
+      </header>
+
+      <div class="tab-content">
+
+        <section class="section">
+          <div class="section-header">
+            <h3 class="section-title">Today's Tasks</h3>
+            <button class="add-btn">+ Task</button>
+          </div>
+          <ul class="task-list"></ul>
+        </section>
+
+        <section class="section">
+          <div class="section-header">
+            <h3 class="section-title">Projects</h3>
+            <button class="add-btn">+ Project</button>
+          </div>
+          <div class="card-grid project-grid"></div>
+        </section>
+
+        <section class="section">
+          <div class="section-header">
+            <h3 class="section-title">Notes & Ideas</h3>
+            <button class="add-btn">+ Note</button>
+          </div>
+          <div class="card-grid notes-grid"></div>
+        </section>
+
+      </div>
+    </section>
+
+
+    <!-- =============== HEALTH TAB ================= -->
+    <section id="health" class="tab-panel" hidden>
+      <header class="page-header">
+        <h2>Health</h2>
+        <p class="page-subtext">Workouts & health tracking</p>
+      </header>
+
+      <div class="tab-content">
+
+        <section class="section">
+          <h3 class="section-title">Daily Summary</h3>
+          <div class="card-grid">
+            <div class="card stat-card">Steps</div>
+            <div class="card stat-card">Water</div>
+            <div class="card stat-card">Calories</div>
+            <div class="card stat-card">Sleep</div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-header">
+            <h3 class="section-title">Workout Log</h3>
+            <button class="add-btn">+ Workout</button>
+          </div>
+          <ul class="workout-list"></ul>
+        </section>
+
+        <section class="section">
+          <h3 class="section-title">Goals</h3>
+          <div class="card-grid goals-grid"></div>
+        </section>
+
+      </div>
+    </section>
+
+
+
+    <!-- =============== MINDSET TAB ================= -->
+    <section id="mindset" class="tab-panel" hidden>
+      <header class="page-header">
+        <h2>Mindset</h2>
+        <p class="page-subtext">Reflection & mental clarity</p>
+      </header>
+
+      <div class="tab-content">
+
+        <section class="section">
+          <h3 class="section-title">Quote of the Day</h3>
+          <div class="card quote-card">Your quote goes here</div>
+        </section>
+
+        <section class="section">
+          <h3 class="section-title">Mood Check-In</h3>
+          <div class="card mood-card">Mood UI</div>
+        </section>
+
+        <section class="section">
+          <h3 class="section-title">Gratitude</h3>
+          <div class="card-grid gratitude-grid"></div>
+        </section>
+
+        <section class="section">
+          <h3 class="section-title">Reflection Notes</h3>
+          <div class="card-grid reflection-grid"></div>
+        </section>
+
+      </div>
+    </section>
+
+
+    <!-- =============== FINANCE TAB ================= -->
+    <section id="finance" class="tab-panel" hidden>
+      <header class="page-header">
+        <h2>Finance</h2>
+        <p class="page-subtext">Track spending & goals</p>
+      </header>
+
+      <div class="tab-content">
+
+        <section class="section">
+          <h3 class="section-title">Daily Spend</h3>
+          <div class="card daily-spend-card">$0 spent today</div>
+        </section>
+
+        <section class="section">
+          <h3 class="section-title">Categories</h3>
+          <div class="card-grid category-grid"></div>
+        </section>
+
+        <section class="section">
+          <div class="section-header">
+            <h3 class="section-title">Transactions</h3>
+            <button class="add-btn">+ Transaction</button>
+          </div>
+          <ul class="transaction-list"></ul>
+        </section>
+
+      </div>
+    </section>
+
+
+    <!-- =============== EDUCATION TAB ================= -->
+    <section id="education" class="tab-panel" hidden>
+      <header class="page-header">
+        <h2>Education</h2>
+        <p class="page-subtext">Courses & learning</p>
+      </header>
+
+      <div class="tab-content">
+
+        <section class="section">
+          <h3 class="section-title">Courses</h3>
+          <div class="card-grid course-grid"></div>
+        </section>
+
+        <section class="section">
+          <h3 class="section-title">Skills</h3>
+          <div class="card-grid skill-grid"></div>
+        </section>
+
+        <section class="section">
+          <h3 class="section-title">Study Log</h3>
+          <div class="card study-log-card">No study logged</div>
+        </section>
+
+      </div>
+    </section>
+
+  </div> <!-- end app-content -->
+
+
+  <!-- Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script> lucide.createIcons(); </script>
+
+</body>
+</html>
