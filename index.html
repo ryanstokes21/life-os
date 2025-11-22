@@ -79,33 +79,89 @@
         <h2>Dashboard</h2>
         <p class="page-subtext">Your daily overview</p>
       </header>
-
+      
       <div class="tab-content">
 
-        <!-- Daily Focus -->
-        <section class="section">
-          <h3 class="section-title">Daily Focus</h3>
-          <div class="card daily-focus-card">
-            <h4 class="daily-focus-title">Your top priority today</h4>
-            <button id="edit-focus-btn">Edit</button>
-          </div>
-        </section>
-
-        <!-- Quick Stats -->
-        <section class="section">
-          <h3 class="section-title">Quick Stats</h3>
-          <div class="card-grid quick-stats-row">
-            <div class="card stat-card">Tasks Today</div>
-            <div class="card stat-card">Health Ring</div>
-            <div class="card stat-card">Mood Check-in</div>
-            <div class="card stat-card">Today's Spending</div>
-          </div>
-        </section>
-
-        <!-- Weekly Overview -->
-        <section class="section">
+        <!-- Weekly Overview (TOP LEFT) -->
+        <section class="section hero">
           <h3 class="section-title">Weekly Overview</h3>
           <div class="card graph-card">Graph Placeholder</div>
+        </section>
+
+        <!-- ===== GROUP 1 - DAILY OVERVIEW (TOP RIGHT) ===== -->
+        <div class="group daily-overview-group">
+          <!-- Daily Focus -->
+          <section class="section daily-focus-card-container">
+            <h3 class="section-title">Daily Focus</h3>
+            <div class="card daily-focus-card">
+              <h4 class="daily-focus-title">Your top priority today</h4>
+              <button id="edit-focus-btn">Edit</button>
+            </div>
+          </section>
+  
+          <!-- Quick Stats -->
+          <section class="section quick-stats-sontainer">
+            <h3 class="section-title">Quick Stats</h3>
+            <div class="card-grid quick-stats-row">
+              <div class="card stat-card">Tasks Today</div>
+              <div class="card stat-card">Health Ring</div>
+              <div class="card stat-card">Mood Check-in</div>
+              <div class="card stat-card">Today's Spending</div>
+            </div>
+          </section>
+
+        </div>
+
+        <!-- ===== GROUP 2 - PERSONAL GROWTH (LEFT MIDDLE) ===== -->
+        <div class="group personal-growth-group">
+          <!-- Habits -->
+           <section class="section habits-container">
+            <h3 class="section-title">Habits</h3>
+            <div class="card habits-card">
+              <ul class="habit-list"></ul>
+            </div>
+           </section>
+
+           <!-- Streaks -->
+           <section class="section streaks-container">
+            <h3 class="section-title">Streaks</h3>
+            <div class="card streaks-card">
+              <ul class="streak-list"></ul>
+            </div>
+           </section>
+
+        </div>
+        
+        <!-- ===== GROUP 3 - LIFE SNAPSHOT (RIGHT MIDDLE) -->
+        <div class="group life-snapshot-group">
+
+          <!-- Weather -->
+          <section class="section weather-container">
+            <h3 class="section-title">Weather</h3>
+            <div class="card weather-card">
+              <div class="weather-main"></div>
+              <div class="weather-extra"></div>
+            </div>
+          </section>
+
+          <!-- Upcoming Events -->
+          <section class="section events-container">
+            <h3 class="section-title">Upcoming Events</h3>
+            <div class="card events-card">
+              <ul class="event-list"></ul>
+            </div>
+          </section>
+
+        </div>
+
+        <!-- ====== Recent Projects && Goals (BOTTOM) ====== -->
+        <section class="section">
+          <h3 class="section-title">Recent Projects && Goals</h3>
+          <div class="card project-preview-card">
+            <ul class="project-preview-list">
+              <li class="project-preview-item"></li>
+            </ul>
+          </div>
         </section>
 
       </div>
