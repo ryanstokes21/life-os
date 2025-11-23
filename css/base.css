@@ -99,9 +99,3 @@ body {
   background: #141416;
   border-top: 1px solid #222;
 }
-
-/* simple placeholder text */
-.app-content::before {
-  content: "App content here";
-  color: #777;
-}
